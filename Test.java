@@ -1,6 +1,6 @@
 
 
-// Test.java: Java driver program to test the Set class
+/*Java driver program to test the Set class*/
 
 import java.util.Scanner;
 
@@ -8,7 +8,7 @@ public class Test {
 
    public static void main(String[] args) {
 
-       Set set = new Set(); // create a new object of class Set
+       Set set = new Set(); // creates a new object of class Set
        System.out.println("Programming Fundamentals");
        System.out.println("NAME:Reddy Anand Kumar Reddy");
        System.out.println("PROGRAMMING ASSIGNMENT 4 - Set ATD\n");
@@ -23,7 +23,7 @@ public class Test {
            // input of command
            System.out.print("Enter command: ");
            line = sc.nextLine();
-           // convert the command into array of strings
+           // converts the command into array of strings
            String data[] = line.split(" ");
            if(data[0].equalsIgnoreCase("add")) // add
            {
@@ -32,12 +32,12 @@ public class Test {
                    {
                        x = Integer.parseInt(data[1]); // convert the data to integer
                        set.add(x); // add x to set
-                       System.out.println(set); // display the updated set
-                   }else // data was not passed
+                       System.out.println(set); // displays the updated set
+                   }else // data will not pass
                        System.out.println("ERROR: Pass the integer to insert.");
                }catch(NumberFormatException e)
                {
-                   // data passed was not integer
+                   // data passed was not an integer
                    System.out.println("ERROR: Enter an integer as the data to insert.");
                }
            }
@@ -48,8 +48,8 @@ public class Test {
                    {
                        x = Integer.parseInt(data[1]); // convert the data to integer
                        set.delete(x); // delete x from set
-                       System.out.println(set); // display the updated set
-                   }else // data was not passed
+                       System.out.println(set); // displays the updated set
+                   }else // data will not pass
                        System.out.println("ERROR: Pass the integer to delete.");
                }catch(NumberFormatException e)
                {
@@ -62,7 +62,7 @@ public class Test {
                try {
                    if(data.length > 1) // validate data has been passed
                    {
-                       x = Integer.parseInt(data[1]); // convert the data to integer
+                       x = Integer.parseInt(data[1]); // converts the data to integer
                        System.out.println(set.exists(x)); // display if x exists in set
                    }else // data was not passed
                        System.out.println("ERROR: Pass the integer to test exists.");
